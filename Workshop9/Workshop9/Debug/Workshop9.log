@@ -1,5 +1,5 @@
 ﻿  w9.cpp
-c:\oop345_workshop9\workshop9\workshop9\w9.cpp(17): warning C4018: '<': signed/unsigned mismatch
-c:\oop345_workshop9\workshop9\workshop9\w9.cpp(19): warning C4018: '<': signed/unsigned mismatch
-  Workshop9.vcxproj -> C:\OOP345_Workshop9\Workshop9\Debug\Workshop9.exe
-  Workshop9.vcxproj -> C:\OOP345_Workshop9\Workshop9\Debug\Workshop9.pdb (Full PDB)
+c:\workshop\oop345\oop345_workshop9\workshop9\workshop9\w9.cpp(39): warning C4018: '<': signed/unsigned mismatch
+c:\workshop\oop345\oop345_workshop9\workshop9\workshop9\w9.cpp(41): warning C4018: '<': signed/unsigned mismatch
+  Workshop9.vcxproj -> C:\Workshop\OOP345\OOP345_Workshop9\Workshop9\Debug\Workshop9.exe
+  Workshop9.vcxproj -> C:\Workshop\OOP345\OOP345_Workshop9\Workshop9\Debug\Workshop9.pdb (Full PDB)

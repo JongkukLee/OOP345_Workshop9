@@ -42,7 +42,9 @@ namespace w9 {
 		std::string desc;
 		double price;
 		Product() {}
-		Product(const std::string& str, double p) : desc(str), price(p) {}
+		Product(const std::string& str, double p) : desc(str), price(p) {
+      if (price < 0) throw std::string("\n*** Negative prices are invalid ***");
+    }
 		void display(std::ostream& os) const {
 			os << std::setw(FWD) << desc << std::setw(FWP)
 				<< price << std::endl;

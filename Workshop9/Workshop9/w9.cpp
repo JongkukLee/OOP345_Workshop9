@@ -5,6 +5,7 @@
 #include <iomanip>
 #include "Element.h"
 #include "List.h"
+#define VERBOSE 0
 
 const int FWC = 5;
 const int FWD = 12;
@@ -12,6 +13,8 @@ const int FWP = 8;
 
 w9::List<w9::Product> merge(const w9::List<w9::Description>& desc, const w9::List<w9::Price>& price) {
 	w9::List<w9::Product> priceList;
+
+#if 0
 
 	// complete this part
 	for (int i = 0; i < price.size(); i++)
@@ -27,10 +30,31 @@ w9::List<w9::Product> merge(const w9::List<w9::Description>& desc, const w9::Lis
 				prd.price = price[i].price;
 				priceList += new w9::Product(prd);
 
-				std::cout << "Description=[" << prd.desc << "], Price=[" << prd.price << "]\n";
+				if(VERBOSE) std::cout << "Description=[" << prd.desc << "], Price=[" << prd.price << "]\n";
 			}
 		}
 	}
+#else
+  // complete this part
+  for (int i = 0; i < desc.size(); i++)
+  {
+    for (int j = 0; j < price.size(); j++)
+    {
+      // compares elements in the two received lists for common product codes 
+      // and builds the user-friendly list from the matching pairs. 
+      if (desc[i].code == price[j].code)
+      {
+        w9::Product prd(desc[i].desc, price[j].price);
+        priceList += new w9::Product(prd);
+
+        if (VERBOSE) std::cout << "Description=[" << prd.desc << "], Price=[" << prd.price << "]\n";
+      }
+    }
+  }
+#endif
+
+
+
 	return priceList;
 }
 
@@ -39,7 +63,7 @@ int main(int argc, char** argv) {
 	argc = 3;
 	argv[0] = "w9";
 	argv[1] = "Descriptions.dat";
-	argv[2] = "BadPrices.dat";
+	argv[2] = "Prices.dat";
 
 
 
