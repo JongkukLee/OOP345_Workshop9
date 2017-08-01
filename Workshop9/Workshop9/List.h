@@ -1,5 +1,22 @@
+// OOP345 Workshop 9: Smart Pointers
+// File Description.cpp
+// Version 1.0
+// Date 2017-07-28
+// Author Jongkuk Lee ( jlee465@myseneca.ca, 127730158 )
+// Description
+//  The List template defines a class that retrieves a list of 
+//  types stored in a text file, holds the elements in an STL vector, 
+//  provides access to them by index and displays them to an output stream.
+//
+// Revision History
+///////////////////////////////////////////////////////////
+// Name     Date    Reason
+//
+///////////////////////////////////////////////////////////
 // Workshop 9 - Smart Pointers
 // List.h
+#ifndef W9_LIST_H
+#define W9_LIST_H
 
 #include <iostream>
 #include <iomanip>
@@ -42,4 +59,4 @@ namespace w9 {
 		return os;
 	}
 }
-
+#endif

@@ -1,3 +1,16 @@
+// OOP345 Workshop 9: Smart Pointers
+// File w9.cpp
+// Version 1.0
+// Date 2017-07-28
+// Author Jongkuk Lee ( jlee465@myseneca.ca, 127730158 )
+// Description
+//      This file is a test file for Workshop9.
+//
+// Revision History
+///////////////////////////////////////////////////////////
+// Name     Date    Reason
+//
+///////////////////////////////////////////////////////////
 // Workshop 9 - Smart Pointers
 // w9.cpp
 
@@ -36,9 +49,9 @@ w9::List<w9::Product> merge(const w9::List<w9::Description>& desc, const w9::Lis
 	}
 #else
   // complete this part
-  for (int i = 0; i < desc.size(); i++)
+  for (size_t i = 0; i < desc.size(); i++)
   {
-    for (int j = 0; j < price.size(); j++)
+    for (size_t j = 0; j < price.size(); j++)
     {
       // compares elements in the two received lists for common product codes 
       // and builds the user-friendly list from the matching pairs. 
@@ -59,13 +72,6 @@ w9::List<w9::Product> merge(const w9::List<w9::Description>& desc, const w9::Lis
 }
 
 int main(int argc, char** argv) {
-
-	argc = 3;
-	argv[0] = "w9";
-	argv[1] = "Descriptions.dat";
-	argv[2] = "Prices.dat";
-
-
 
 	std::cout << "\nCommand Line : ";
 	for (int i = 0; i < argc; i++) {
